@@ -16,9 +16,9 @@ class Body extends Component {
     return (
       <div>
           <Search />
+          <Help />
           <List />
           <Display />
-          <Help />
       </div>
     );
   }
