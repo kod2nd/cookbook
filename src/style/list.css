@@ -2,4 +2,7 @@
   /* background: lightgray; */
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
+  height: 400px;
+  box-sizing: content-box;
+  overflow-y: auto
 }
