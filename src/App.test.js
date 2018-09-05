@@ -13,8 +13,8 @@ describe("<App />", () => {
   });
 
   it("Has Header and Body Components", () => {
-    const components = result.props.children.map(obj => {
-      return obj.type.name;
+    const components = result.props.children.map(child => {
+      return child.type.name;
     });
     expect(isInArray("Header", components)).toBe(true);
     expect(isInArray("Body", components)).toBe(true);
