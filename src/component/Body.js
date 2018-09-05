@@ -13,7 +13,12 @@ class Body extends Component {
     };
   }
 
+  componentDidMount() {
+      this.setState({data: seedData})
+  }
+
   render() {
+      console.log(this.state.data)
     return (
       <div className="body">
         <SideBar className="side-bar" />

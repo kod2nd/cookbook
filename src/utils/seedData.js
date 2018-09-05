@@ -22,3 +22,5 @@ const seedData = [
       publisher_url: "http://allrecipes.com"
     }
   ];
+
+  export default seedData
