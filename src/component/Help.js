@@ -1,39 +1,38 @@
 import React, { Component } from "react";
+import Button from "./Button";
 
 class Help extends Component {
   constructor() {
     super();
-    (this.state = {
+    this.state = {
       isHelpTextVisible: false
-    }),
-      (this.helpText =
-        "Multiple Ingredients should be Seperate by commas. E.g. onion, mushroom, rice");
+    };
+    this.helpText =
+      "Multiple Ingredients should be Seperate by commas. E.g. onion, mushroom, rice";
   }
 
   toggleHelpText = () => {
     this.setState({
-      isHelpTextVisible: this.state.isHelpTextVisible ? false : true,
+      isHelpTextVisible: this.state.isHelpTextVisible ? false : true
     });
   };
 
   render() {
-    const createButton = (className, content, onClick) => {
-      return (
-        <button className={className} onClick={onClick}>
-          {content}
-        </button>
-      );
-    };
-
     if (this.state.isHelpTextVisible) {
       return (
         <div>
-          {createButton("button", "?", this.toggleHelpText)}
+          <Button
+            className="button"
+            onClick={this.toggleHelpText}
+            content="?"
+          />
           <div className="help-text">{this.helpText}</div>
         </div>
       );
     }
-    return createButton("button", "?", this.toggleHelpText);
+    return (
+      <Button className="button" onClick={this.toggleHelpText} content="?" />
+    );
   }
 }
 
