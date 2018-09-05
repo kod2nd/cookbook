@@ -4,12 +4,13 @@ import Search from "./Search";
 import Help from "./Help";
 import '../style/SideBar.css'
 
-const SideBar = () => {
+const SideBar = (props) => {
+    const {data} = props
   return (
     <div className="sidebar">
       <Search />
       <Help />
-      <List />
+      <List data={data}/>
     </div>
   );
 };

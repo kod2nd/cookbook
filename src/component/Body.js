@@ -18,10 +18,10 @@ class Body extends Component {
   }
 
   render() {
-      console.log(this.state.data)
+      const {data} = this.state
     return (
       <div className="body">
-        <SideBar className="side-bar" />
+        <SideBar className="side-bar" data={data} />
         <Display className="display" />
       </div>
     );

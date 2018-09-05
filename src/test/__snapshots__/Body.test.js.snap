@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should match 1`] = `
+Object {
+  "children": Array [
+    <SideBar
+      className="side-bar"
+      data={Array []}
+/>,
+    <Display
+      className="display"
+/>,
+  ],
+  "className": "body",
+}
+`;

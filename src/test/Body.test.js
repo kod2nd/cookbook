@@ -10,4 +10,13 @@ describe("<Body /> Components are", () => {
   it("Display", () => {
     expect(isInArray("Display", components)).toBe(true);
   });
+  it("SideBar", () => {
+    expect(isInArray("SideBar", components)).toBe(true);
+  });
+});
+
+describe('Snapshot', () => {
+  it('should match', () => {
+    expect(result.props).toMatchSnapshot()
+  });
 });
