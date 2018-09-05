@@ -1,24 +1,23 @@
 import React, { Component } from "react";
-import List from './List'
-import Search from './Search'
-import Display from './Display'
-import Help from './Help'
+import SideBar from "./SideBar";
+import Display from "./Display";
+import seedData from "../utils/seedData"
+import "../style/Body.css";
 
 class Body extends Component {
   constructor() {
     super();
     this.state = {
-      isHelpClicked: false
+      isHelpClicked: false,
+      data: []
     };
   }
 
   render() {
     return (
-      <div>
-          <Search />
-          <Help />
-          <List />
-          <Display />
+      <div className="body">
+        <SideBar className="side-bar" />
+        <Display className="display" />
       </div>
     );
   }

@@ -7,16 +7,7 @@ const components = result.props.children.map(child => {
 });
 
 describe("<Body /> Components are", () => {
-  it("List", () => {
-    expect(isInArray("List", components)).toBe(true);;
-  });
-  it("Search", () => {
-    expect(isInArray("Search", components)).toBe(true);
-  });
-  it("Search", () => {
+  it("Display", () => {
     expect(isInArray("Display", components)).toBe(true);
-  });
-  it("Help", () => {
-    expect(isInArray("Help", components)).toBe(true);
   });
 });

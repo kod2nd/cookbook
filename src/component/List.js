@@ -1,10 +1,10 @@
 import React from 'react';
-import '../style/list.css'
+import '../style/List.css'
 
 const List = () => {
     return (
         <div className="list">
-            
+            list
         </div>
     );
 }

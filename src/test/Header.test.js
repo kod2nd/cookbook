@@ -6,6 +6,4 @@ it('should ', () => {
     const renderer = new ShallowRenderer()
     renderer.render(<Header />)
     const result = renderer.getRenderOutput()
-
-    console.log(result)
 });

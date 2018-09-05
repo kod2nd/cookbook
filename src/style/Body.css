@@ -1,0 +1,16 @@
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 10px auto
+}
+
+.body.side-bar {
+  grid-column: 1/2;
+  background: skyblue;
+}
+
+.body.display {
+  grid-column: 2/3;
+  background: tomato;
+}
