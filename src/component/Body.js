@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import List from './List'
+import Search from './Search'
+import Display from './Display'
+import Help from './Help'
 
 const INPUT_PLACEHOLDER = "e.g. chicken, carrot, pasta...";
 const SEARCH_BUTTON_TEXT = "Find Recipes"
@@ -14,6 +18,10 @@ class Body extends Component {
   render() {
     return (
       <div>
+          <Search />
+          <List />
+          <Display />
+          <Help />
         <div className="help">
           Multiple Ingredients should be Seperate by commas. E.g. onion,
           mushroom, rice
