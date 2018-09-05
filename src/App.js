@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './component/Header';
+import Body from './component/Body';
 
 class App extends Component {
   render() {
+    const API_KEY = process.env.REACT_APP_FORK_2_FORK_API_KEY
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header />
+        <Body />
       </div>
     );
   }
