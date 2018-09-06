@@ -12,6 +12,7 @@ class Body extends Component {
       data: [],
       selectedRecipe: null
     };
+    this.userInput = ""
   }
 
   
@@ -20,11 +21,10 @@ class Body extends Component {
   }
 
   userInputEventListener = (event) => {
-    console.log(event.target.value)
+    this.userInput= event.target.value
   }
   
   setSelectedRecipe = id => {
-    console.log("here", id)
     const selectedRecipe = this.state.data.find(recipe => {
       if (recipe.recipe_id === id) {
         return recipe;
@@ -35,7 +35,6 @@ class Body extends Component {
 
   render() {
     const { data, selectedRecipe } = this.state;
-    console.log("body", selectedRecipe)
     return (
       <div className="body">
         <SideBar
