@@ -1,8 +1,8 @@
 import React from "react";
+const INPUT_PLACEHOLDER = "Ingredients e.g. chicken, carrot, pasta...";
+const SEARCH_BUTTON_TEXT = "Find Recipes";
 
 const Search = () => {
-  const INPUT_PLACEHOLDER = "Ingredients e.g. chicken, carrot, pasta...";
-  const SEARCH_BUTTON_TEXT = "Find Recipes";
   return (
     <div>
       <input type="text" placeholder={INPUT_PLACEHOLDER} />
