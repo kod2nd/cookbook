@@ -14,10 +14,15 @@ class Body extends Component {
     };
   }
 
+  
   componentDidMount() {
     this.setState({ data: seedData });
   }
 
+  userInputEventListener = (event) => {
+    console.log(event.target.value)
+  }
+  
   setSelectedRecipe = id => {
     console.log("here", id)
     const selectedRecipe = this.state.data.find(recipe => {
@@ -37,6 +42,7 @@ class Body extends Component {
           className="side-bar"
           data={data}
           handleClick={this.setSelectedRecipe}
+          handleUserInput={this.userInputEventListener}
         />
         <Display className="display" selectedRecipe={selectedRecipe} />
       </div>
