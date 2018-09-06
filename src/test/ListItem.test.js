@@ -23,7 +23,7 @@ describe("<List />", () => {
     });
     it("have a clickable div that calls a function", () => {
       wrapper.find(".list-item").simulate("click");
-      expect(mockClickHandler).toBeCalledWith(12345);
+      expect(mockClickHandler).toBeCalledWith(mockItem.recipe_id);
     });
   });
 });
