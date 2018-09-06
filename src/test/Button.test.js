@@ -7,7 +7,7 @@ describe("<Button />", () => {
   const mockClickHandler = jest.fn();
 
   const wrapper = shallow(
-    <Button className="test-button" content="test" onClick={mockClickHandler} />
+    <Button className="test-button" content="test" handleClick={mockClickHandler} />
   );
 
   it("should call mockClickHandler when clicked", () => {
