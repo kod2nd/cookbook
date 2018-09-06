@@ -21,7 +21,7 @@ class Body extends Component {
   }
 
   searchClickHandler = () => {
-    console.log("clicked")
+    console.log(this.userInput)
   }
 
   userInputEventListener = (event) => {
