@@ -1,19 +1,24 @@
+import React from "react"
 import SideBar from "../component/SideBar";
-import {shallowRender, isInArray} from "./helper/testHelper"
+import List from "../component/List"
+import Search from "../component/Search"
+import { shallowRender } from "./helper/testHelper";
+import { shallow } from "enzyme";
 
-const result = shallowRender(SideBar)
-const components = result.props.children.map(child => {
-  return child.type.name;
+const wrapper = shallow(<SideBar />);
+
+describe("renders component", () => {
+  it("<Search />", () => {
+    expect(wrapper.find(Search)).toHaveLength(1);
+  });
+  it("<List />", () => {
+    expect(wrapper.find(List)).toHaveLength(1);
+  });
 });
 
-describe("<SideBar /> Components are", () => {
-  it("List", () => {
-    expect(isInArray("List", components)).toBe(true);;
-  });
-  it("Search", () => {
-    expect(isInArray("Search", components)).toBe(true);
-  });
-  it("Help", () => {
-    expect(isInArray("Help", components)).toBe(true);
+describe("Snapshot", () => {
+  const result = shallowRender(SideBar);
+  it("should match", () => {
+    expect(result.props).toMatchSnapshot();
   });
 });

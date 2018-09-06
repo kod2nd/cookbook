@@ -20,6 +20,10 @@ class Body extends Component {
     this.setState({ data: seedData });
   }
 
+  searchClickHandler = () => {
+    console.log("clicked")
+  }
+
   userInputEventListener = (event) => {
     this.userInput= event.target.value
   }
@@ -42,6 +46,7 @@ class Body extends Component {
           data={data}
           handleClick={this.setSelectedRecipe}
           handleUserInput={this.userInputEventListener}
+          handleSearchClick={this.searchClickHandler}
         />
         <Display className="display" selectedRecipe={selectedRecipe} />
       </div>

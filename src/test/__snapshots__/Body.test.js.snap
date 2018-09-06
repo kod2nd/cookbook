@@ -7,6 +7,7 @@ Object {
       className="side-bar"
       data={Array []}
       handleClick={[Function]}
+      handleSearchClick={[Function]}
       handleUserInput={[Function]}
 />,
     <Display
