@@ -6,6 +6,7 @@ Object {
     <SideBar
       className="side-bar"
       data={Array []}
+      handleClick={[Function]}
 />,
     <Display
       className="display"
