@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot should match 1`] = `
+exports[`<Body /> Snapshot should match 1`] = `
 Object {
   "children": Array [
     <SideBar

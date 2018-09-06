@@ -1,26 +1,25 @@
+import React from "react"
 import Body from "../component/Body";
-import {shallowRender, isInArray} from "./helper/testHelper"
+import { shallowRender } from "./helper/testHelper";
+import { shallow } from "enzyme";
+import SideBar from "../component/SideBar";
+import Display from "../component/Display"
 
-const result = shallowRender(Body)
-const components = result.props.children.map(child => {
-  return child.type.name;
-});
-
-describe("<Body /> Components are", () => {
-  it("Display", () => {
-    expect(isInArray("Display", components)).toBe(true);
+describe("<Body />", () => {
+  const wrapper = shallow(<Body />)
+  describe('renders component', () => {
+    it('<SideBar />', () => {
+      expect(wrapper.find(SideBar)).toHaveLength(1)
+    });
+    it('<Display />', () => {
+      expect(wrapper.find(Display)).toHaveLength(1)
+    });
+    
   });
-  it("SideBar", () => {
-    expect(isInArray("SideBar", components)).toBe(true);
-  });
-  it("SideBar", () => {
-    expect(isInArray("SideBar", components)).toBe(true);
-  });
-
-});
-
-describe('Snapshot', () => {
-  it('should match', () => {
-    expect(result.props).toMatchSnapshot()
+  describe("Snapshot", () => {
+    const result = shallowRender(Body);
+    it("should match", () => {
+      expect(result.props).toMatchSnapshot();
+    });
   });
 });
