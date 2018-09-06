@@ -24,7 +24,7 @@ describe("search-input", () => {
     const TEST_VALUE = "test value";
     inputBox.simulate("change", { target: { value: TEST_VALUE } });
     expect(mockEventHandler).toBeCalledWith({
-      target: { value: "test value" }
+      target: { value: TEST_VALUE }
     });
   });
 });
