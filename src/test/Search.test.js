@@ -13,5 +13,4 @@ describe("<Search /> should have", () => {
   it("A Button Component", () => {
     expect(wrapper.find(Button)).toHaveLength(1);
   });
-
 });

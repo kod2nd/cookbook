@@ -26,7 +26,7 @@ class Body extends Component {
     const { data } = this.state;
     return (
       <div className="body">
-        <SideBar className="side-bar" data={data} />
+        <SideBar className="side-bar" data={data} handleClick={this.setSelectedItem}/>
         <Display className="display" />
       </div>
     );

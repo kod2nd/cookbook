@@ -4,11 +4,11 @@ import Search from "./Search";
 import '../style/SideBar.css'
 
 const SideBar = (props) => {
-    const {data} = props
+    const {data, handleClick} = props
   return (
     <div className="sidebar">
       <Search />
-      <List data={data}/>
+      <List data={data} handleClick={handleClick}/>
     </div>
   );
 };
