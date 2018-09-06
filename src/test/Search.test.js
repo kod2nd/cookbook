@@ -1,16 +1,30 @@
 import React from "react";
 import Search from "../component/Search";
-import Button from "../component/Button"
+import Button from "../component/Button";
 import { shallow } from "enzyme";
 
-const wrapper = shallow(<Search />);
-describe("<Search /> should have", () => {
+const mockEventHandler = jest.fn(() => {});
 
+const wrapper = shallow(<Search handleUserInput={mockEventHandler} />);
+const inputBox = wrapper.find(".search-input");
+const button = wrapper.find(Button);
+
+describe("<Search /> should have", () => {
   it("An Input Field", () => {
-    expect(wrapper.find(".search-input")).toHaveLength(1);
+    expect(inputBox).toHaveLength(1);
   });
-  
+
   it("A Button Component", () => {
-    expect(wrapper.find(Button)).toHaveLength(1);
+    expect(button).toHaveLength(1);
+  });
+});
+
+describe("search-input", () => {
+  it("should handle input events", () => {
+    const TEST_VALUE = "test value";
+    inputBox.simulate("change", { target: { value: TEST_VALUE } });
+    expect(mockEventHandler).toBeCalledWith({
+      target: { value: "test value" }
+    });
   });
 });
