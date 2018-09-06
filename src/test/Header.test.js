@@ -1,9 +1,7 @@
-import React from 'react'
-import ShallowRenderer from 'react-test-renderer/shallow'
+import { shallowRender } from "./helper/testHelper";
 import Header from '../component/Header'
 
-it('should ', () => {
-    const renderer = new ShallowRenderer()
-    renderer.render(<Header />)
-    const result = renderer.getRenderOutput()
+it('Snapshot test', () => {
+    const result = shallowRender(Header)
+    expect(result).toMatchSnapshot()
 });
