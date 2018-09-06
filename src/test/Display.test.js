@@ -14,10 +14,8 @@ const testData = {
   publisher_url: "test.publisher"
 };
 
-const TEST_SELECTED_ITEM_RECIPE_ID = 54321;
-
 const wrapper = shallow(
-  <Display data={testData} selectedItem={TEST_SELECTED_ITEM_RECIPE_ID} />
+  <Display selectedRecipe={testData} />
 );
 
 describe("<Display />", () => {
@@ -41,7 +39,7 @@ describe("<Display />", () => {
 
   describe("Snapshot", () => {
     const result = shallowRender(Display);
-    it.skip("should match", () => {
+    it("should match", () => {
       expect(result.props).toMatchSnapshot();
     });
   });

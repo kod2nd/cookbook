@@ -3,7 +3,6 @@ import "../style/Display.css";
 
 const Display = props => {
   const { selectedRecipe } = props;
-  console.log(selectedRecipe)
   if (selectedRecipe) {
     return (
       <div className="display">
