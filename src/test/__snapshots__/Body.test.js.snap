@@ -10,8 +10,7 @@ Object {
 />,
     <Display
       className="display"
-      data={Array []}
-      selectedItem={null}
+      selectedRecipe={null}
 />,
   ],
   "className": "body",

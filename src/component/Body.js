@@ -36,7 +36,7 @@ class Body extends Component {
           data={data}
           handleClick={this.setSelectedItem}
         />
-        <Display className="display" data={data} selectedItem={selectedRecipe} />
+        <Display className="display" selectedRecipe={selectedRecipe} />
       </div>
     );
   }
