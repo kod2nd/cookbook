@@ -4,7 +4,7 @@ const INPUT_PLACEHOLDER = "Ingredients e.g. chicken, carrot, pasta...";
 const SEARCH_BUTTON_TEXT = "Find Recipes";
 
 const Search = props => {
-  const { handleUserInput } = props;
+  const { handleUserInput, handleSearchClick } = props;
   return (
     <div className="search">
       <input
@@ -16,7 +16,7 @@ const Search = props => {
       <Button
         className="search-button"
         content={SEARCH_BUTTON_TEXT}
-        handleClick={props.handleClick}
+        handleClick={props.handleSearchClick}
       />
     </div>
   );

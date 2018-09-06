@@ -2,6 +2,7 @@ import React from "react";
 import Search from "../component/Search";
 import Button from "../component/Button";
 import { shallow } from "enzyme";
+import { shallowRender } from "./helper/testHelper";
 
 const mockEventHandler = jest.fn(() => {});
 
@@ -26,5 +27,12 @@ describe("search-input", () => {
     expect(mockEventHandler).toBeCalledWith({
       target: { value: TEST_VALUE }
     });
+  });
+});
+
+describe("Snapshot", () => {
+  const result = shallowRender(Search);
+  it("should match", () => {
+    expect(result.props).toMatchSnapshot();
   });
 });

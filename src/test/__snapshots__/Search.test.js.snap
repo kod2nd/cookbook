@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot should match 1`] = `
+Object {
+  "children": Array [
+    <input
+      className="search-input"
+      onChange={[Function]}
+      placeholder="Ingredients e.g. chicken, carrot, pasta..."
+      type="text"
+/>,
+    <Button
+      className="search-button"
+      content="Find Recipes"
+      handleClick={undefined}
+/>,
+  ],
+  "className": "search",
+}
+`;
