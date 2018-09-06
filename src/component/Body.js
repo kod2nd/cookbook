@@ -19,6 +19,7 @@ class Body extends Component {
   }
 
   setSelectedRecipe = id => {
+    console.log("here", id)
     const selectedRecipe = this.state.data.find(recipe => {
       if (recipe.recipe_id === id) {
         return recipe;
@@ -29,12 +30,13 @@ class Body extends Component {
 
   render() {
     const { data, selectedRecipe } = this.state;
+    console.log("body", selectedRecipe)
     return (
       <div className="body">
         <SideBar
           className="side-bar"
           data={data}
-          handleClick={this.setSelectedItem}
+          handleClick={this.setSelectedRecipe}
         />
         <Display className="display" selectedRecipe={selectedRecipe} />
       </div>

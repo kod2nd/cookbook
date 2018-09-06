@@ -2,17 +2,18 @@ import React from "react";
 import "../style/Display.css";
 
 const Display = props => {
-  const { data, selectedItem } = props;
-  if (data) {
+  const { selectedRecipe } = props;
+  console.log(selectedRecipe)
+  if (selectedRecipe) {
     return (
       <div className="display">
-        <div className="title">{data.title}</div>
-        <img className="display-image" src={data.image_url} alt="" />
+        <div className="title">{selectedRecipe.title}</div>
+        <img className="display-image" src={selectedRecipe.image_url} alt="" />
         <div className="recipe-link">
           View Recipe:
-          <a className="link-url" href={data.source_url} />
+          <a className="link-url" target="_blank" href={selectedRecipe.source_url}>{selectedRecipe.source_url}</a> />
         </div>
-        <div className="popularity">Popularity: {data.social_rank}</div>
+        <div className="popularity">Popularity: {selectedRecipe.social_rank.toFixed(5)}</div>
       </div>
     );
   }
