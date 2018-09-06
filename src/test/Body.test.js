@@ -18,10 +18,23 @@ describe("<Body />", () => {
   });
 
   describe("Methods", () => {
-    it("setSelectedItem should set the state of selectedItem with the argument that is passed into it", () => {
-      const TEST_RECIPE_ID = 12345;
-      wrapper.instance().setSelectedItem(TEST_RECIPE_ID);
-      expect(wrapper.state("selectedItem")).toEqual(12345);
+    it("setSelectedRecipe is called with an id, it should set the state of selectedRecipe with the appropriate recipe", () => {
+      const TEST_RECIPE_ID = "12345";
+
+      const testData = [
+        {
+          title: "test-meal1",
+          recipe_id: "12345"
+        },
+        {
+          title: "test-meal2",
+          recipe_id: "54321"
+        }
+      ];
+
+      wrapper.setState({ data: testData });
+      wrapper.instance().setSelectedRecipe(TEST_RECIPE_ID);
+      expect(wrapper.state("selectedRecipe")).toMatchObject(testData[0]);
     });
   });
 

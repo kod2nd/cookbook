@@ -10,7 +10,7 @@ class Body extends Component {
     this.state = {
       isHelpClicked: false,
       data: [],
-      selectedItem: null
+      selectedRecipe: null
     };
   }
 
@@ -18,16 +18,25 @@ class Body extends Component {
     this.setState({ data: seedData });
   }
 
-  setSelectedItem = id => {
-    this.setState({ selectedItem: id });
+  setSelectedRecipe = id => {
+    const selectedRecipe = this.state.data.find(recipe => {
+      if (recipe.recipe_id === id) {
+        return recipe;
+      }
+    });
+    this.setState({ selectedRecipe: selectedRecipe });
   };
 
   render() {
-    const { data, selectedItem } = this.state;
+    const { data, selectedRecipe } = this.state;
     return (
       <div className="body">
-        <SideBar className="side-bar" data={data} handleClick={this.setSelectedItem}/>
-        <Display className="display" data={data} selectedItem={selectedItem}  />
+        <SideBar
+          className="side-bar"
+          data={data}
+          handleClick={this.setSelectedItem}
+        />
+        <Display className="display" data={data} selectedItem={selectedRecipe} />
       </div>
     );
   }
