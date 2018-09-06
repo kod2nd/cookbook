@@ -16,9 +16,9 @@ class Body extends Component {
     this.userInput = "";
   }
 
-  componentDidMount() {
-    this.setState({ data: seedData });
-  }
+  // componentDidMount() {
+  //   this.setState({ data: seedData });
+  // }
 
   searchClickHandler = async () => {
     const url = URL(API_KEY, this.userInput);
@@ -26,7 +26,7 @@ class Body extends Component {
 
     if (response.status === 200) {
       const recipesData = await response.json();
-      this.setState({ data: recipesData });
+      this.setState({ data: recipesData.recipes });
     }
   };
 

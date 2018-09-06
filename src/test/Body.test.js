@@ -49,7 +49,7 @@ describe("<Body />", () => {
     });
 
     it("searchClickHandler should fetch data and setState", async () => {
-      const mockFetchData = [{ name: "name1" }, { name: "name2" }];
+      const mockFetchData = {recipes:[{ name: "name1" }, { name: "name2" }]};
       fetch.resetMocks();
       fetch.mockResponseOnce(JSON.stringify(mockFetchData));
       const newWrapper = shallow(<Body />);
@@ -59,7 +59,7 @@ describe("<Body />", () => {
       const url = URL(API_KEY, newBody.userInput);
 
       expect(fetch).toBeCalledWith(url);
-      expect(newWrapper.state("data")).toEqual(mockFetchData);
+      expect(newWrapper.state("data")).toEqual(mockFetchData.recipes);
     });
   });
 
