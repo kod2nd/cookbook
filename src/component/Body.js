@@ -3,6 +3,7 @@ import SideBar from "./SideBar";
 import Display from "./Display";
 import seedData from "../utils/seedData";
 import "../style/Body.css";
+import { URL, API_KEY } from "../utils/getHelper";
 
 class Body extends Component {
   constructor() {
@@ -12,22 +13,27 @@ class Body extends Component {
       data: [],
       selectedRecipe: null
     };
-    this.userInput = ""
+    this.userInput = "";
   }
 
-  
   componentDidMount() {
     this.setState({ data: seedData });
   }
 
-  searchClickHandler = () => {
-    console.log(this.userInput)
-  }
+  searchClickHandler = async () => {
+    const url = URL(API_KEY, this.userInput);
+    const response = await fetch(url);
 
-  userInputEventListener = (event) => {
-    this.userInput= event.target.value
-  }
-  
+    if (response.status === 200) {
+      const recipesData = await response.json();
+      this.setState({ data: recipesData });
+    }
+  };
+
+  userInputEventListener = event => {
+    this.userInput = event.target.value;
+  };
+
   setSelectedRecipe = id => {
     const selectedRecipe = this.state.data.find(recipe => {
       if (recipe.recipe_id === id) {

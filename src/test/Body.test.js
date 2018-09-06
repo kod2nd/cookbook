@@ -4,6 +4,7 @@ import { shallowRender } from "./helper/testHelper";
 import { shallow } from "enzyme";
 import SideBar from "../component/SideBar";
 import Display from "../component/Display";
+import { URL, API_KEY } from "../utils/getHelper";
 
 const wrapper = shallow(<Body />);
 
@@ -37,6 +38,7 @@ describe("<Body />", () => {
       body.setSelectedRecipe(TEST_RECIPE_ID);
       expect(wrapper.state("selectedRecipe")).toMatchObject(testData[0]);
     });
+
     it("userInputEventLister should set this.userInput based on event.target.value", () => {
       const MOCK_INPUT = "mock input";
       const mockUserInput = {
@@ -44,6 +46,20 @@ describe("<Body />", () => {
       };
       body.userInputEventListener(mockUserInput);
       expect(body.userInput).toBe(MOCK_INPUT);
+    });
+
+    it("searchClickHandler should fetch data and setState", async () => {
+      const mockFetchData = [{ name: "name1" }, { name: "name2" }];
+      fetch.resetMocks();
+      fetch.mockResponseOnce(JSON.stringify(mockFetchData));
+      const newWrapper = shallow(<Body />);
+      const newBody = newWrapper.instance();
+      await newBody.searchClickHandler();
+
+      const url = URL(API_KEY, newBody.userInput);
+
+      expect(fetch).toBeCalledWith(url);
+      expect(newWrapper.state("data")).toEqual(mockFetchData);
     });
   });
 
