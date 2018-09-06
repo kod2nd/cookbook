@@ -23,11 +23,11 @@ class Body extends Component {
   };
 
   render() {
-    const { data } = this.state;
+    const { data, selectedItem } = this.state;
     return (
       <div className="body">
         <SideBar className="side-bar" data={data} handleClick={this.setSelectedItem}/>
-        <Display className="display" />
+        <Display className="display" data={data} selectedItem={selectedItem}  />
       </div>
     );
   }

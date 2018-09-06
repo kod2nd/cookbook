@@ -10,6 +10,8 @@ Object {
 />,
     <Display
       className="display"
+      data={Array []}
+      selectedItem={null}
 />,
   ],
   "className": "body",
