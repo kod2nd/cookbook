@@ -13,6 +13,10 @@ describe("<Body /> Components are", () => {
   it("SideBar", () => {
     expect(isInArray("SideBar", components)).toBe(true);
   });
+  it("SideBar", () => {
+    expect(isInArray("SideBar", components)).toBe(true);
+  });
+
 });
 
 describe('Snapshot', () => {

@@ -4,7 +4,7 @@ import ListItem from "./ListItem";
 
 const List = props => {
   const { data } = props;
-  console.log("insideList", data);
+//   console.log("insideList", data);
 
   return (
     <div className="list">
