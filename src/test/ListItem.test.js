@@ -21,7 +21,7 @@ describe("<List />", () => {
     it("have list content", () => {
       expect(wrapper.find(".list-content")).toHaveLength(1);
     });
-    it("have a clickable div", () => {
+    it("have a clickable div that calls a function", () => {
       wrapper.find(".list-item").simulate("click");
       expect(mockClickHandler).toBeCalledWith(12345);
     });
