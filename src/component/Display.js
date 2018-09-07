@@ -12,7 +12,7 @@ const Display = props => {
       <div className="display">
         <div className="title">
           {selectedRecipe.title} |{" "}
-          {percentToRating(selectedRecipe.social_rank, RATING_STEPS)}
+          {percentToRating(selectedRecipe.social_rank, RATING_STEPS)} ★
         </div>
 
         <img className="display-image" src={selectedRecipe.image_url} alt="" />
