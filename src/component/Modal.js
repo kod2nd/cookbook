@@ -1,10 +1,11 @@
 import React from "react";
 import "../style/Modal.css";
+import convertToHttps from "../utils/convertToHttps"
 
 const Modal = props => {
   const { selectedRecipe } = props;
   if (selectedRecipe) {
-    const recipeUrl = selectedRecipe.source_url;
+    const recipeUrl = convertToHttps(selectedRecipe.source_url);
     return (
       <div className="modal">
         <a className="view-recipe" href="#openModal">

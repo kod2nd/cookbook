@@ -28,11 +28,11 @@
 }
 
 .display-image {
-  background: 50% 50% no-repeat;
-  object-fit: contain;
+  /* background: 50% 50% no-repeat; */
+  object-fit: cover;
   margin: 5px auto;
   width: 250px;
-  height: auto;
+  max-height: 250px;
   font-size: 0.75em;
   box-sizing: border-box;
 }
@@ -44,7 +44,8 @@
   }
 
   .display-image {
-    width: 200px;
+    /* width: 200px; */
+    /* max-height: 175px; */
   }
 
   .display .title {
