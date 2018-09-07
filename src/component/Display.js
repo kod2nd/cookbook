@@ -9,17 +9,10 @@ const Display = props => {
       <div className="display">
         <div className="title">{selectedRecipe.title}</div>
         <img className="display-image" src={selectedRecipe.image_url} alt="" />
-        <div className="recipe-link">
-          View Recipe:
-          <a
-            className="link-url"
-            target="_blank"
-            href={selectedRecipe.source_url}
-          >
-            {selectedRecipe.source_url}
-          </a>
+          <Modal id="openModal" selectedRecipe={selectedRecipe}/>
+        <div className="recipe-source">
+          Source: {selectedRecipe.publisher}, {selectedRecipe.publisher_url}
         </div>
-        <Modal id="openModal" selectedRecipe={selectedRecipe}/>
         <div className="popularity">
           Popularity: {selectedRecipe.social_rank.toFixed(5)}
         </div>

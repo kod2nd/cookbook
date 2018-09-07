@@ -18,13 +18,10 @@ describe("<Display />", () => {
       expect(wrapper.find(".display-image")).toHaveLength(1);
     });
     it("recipe link", () => {
-      expect(wrapper.find(".recipe-link")).toHaveLength(1);
+      expect(wrapper.find(".recipe-source")).toHaveLength(1);
     });
     it("link text", () => {
       expect(wrapper.find(".popularity")).toHaveLength(1);
-    });
-    it("link url", () => {
-      expect(wrapper.find(".link-url")).toHaveLength(1);
     });
   });
 
