@@ -31,13 +31,13 @@
 }
 
 .display-image {
-  /* background: 50% 50% no-repeat; */
   object-fit: cover;
   margin: 5px auto;
   width: 250px;
   max-height: 250px;
   font-size: 0.75em;
   box-sizing: border-box;
+  border-radius: 3px
 }
 
 @media all and (max-width: 850px) {
@@ -45,11 +45,6 @@
     grid-column: 1/2;
     height: 60vh;
     border-top:none
-  }
-
-  .display-image {
-    /* width: 200px; */
-    /* max-height: 175px; */
   }
 
   .display .title {
