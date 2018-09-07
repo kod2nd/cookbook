@@ -13,6 +13,7 @@ Object {
       handleClick={[Function]}
       handleSearchClick={[Function]}
       handleUserInput={[Function]}
+      selectedRecipe={null}
 />,
   ],
   "className": "body",

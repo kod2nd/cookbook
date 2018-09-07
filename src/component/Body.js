@@ -55,6 +55,7 @@ class Body extends Component {
           handleClick={this.setSelectedRecipe}
           handleUserInput={this.userInputEventListener}
           handleSearchClick={this.searchClickHandler}
+          selectedRecipe={selectedRecipe}
         />
       </div>
     );

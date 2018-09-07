@@ -8,6 +8,8 @@
   border-bottom: 1px solid lightgray;
 }
 
+
+
 .list-item:hover {
   background: rgb(231, 231, 231)
 }
@@ -19,7 +21,7 @@
   grid-column: 1/2;
 }
 
-.list-item .list-content {
+.list-content {
   grid-column: 2/3;
   text-align: left;
   font-size: 0.85em;
@@ -31,4 +33,26 @@
 
 .list-content .item-source {
   font-size: 0.75em
+}
+
+.selected-list-item {
+  background:grey;
+  height: 60px;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.selected-list-item:hover {
+  background: rgb(231, 231, 231)
+}
+
+.selected-list-item .image {
+  width: 100%;
+  height: 50px;
+  object-fit: contain;
+  grid-column: 1/2;
 }

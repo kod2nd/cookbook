@@ -1,10 +1,10 @@
 import selectedRecipeId from "../utils/selectedRecipeId"
 import testData from "../test/helper/testData"
 
-test('Should return itself if an argument is passed into it', () => {
-    expect(selectedRecipeId(testData.recipe_id)).toBe("54321")
+test('Should return true if recipe Ids match', () => {
+    expect(selectedRecipeId(testData, "54321")).toBe(true)
 });
 
-test('Should return null if empty string is passed as an argument', () => {
-    expect(selectedRecipeId("")).toBe(null)
+test('Should return false if recipe Ids do not match', () => {
+    expect(selectedRecipeId(testData, "12345")).toBe(false)
 });
