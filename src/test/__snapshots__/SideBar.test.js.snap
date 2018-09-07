@@ -10,6 +10,7 @@ Object {
     <List
       data={undefined}
       handleClick={undefined}
+      selectedRecipe={undefined}
 />,
   ],
   "className": "sidebar",

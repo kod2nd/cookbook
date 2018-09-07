@@ -1,8 +1,10 @@
-const selectedRecipeId = (selectedRecipe, recipeID) => {
-    if(selectedRecipe.recipe_id === recipeID){
-      return true
+const selectedRecipeId = (selectedRecipe, recipeId) => {
+  if (selectedRecipe && recipeId) {
+    if (selectedRecipe.recipe_id === recipeId) {
+      return true;
     }
-    return false
   }
+  return false;
+};
 
-  export default selectedRecipeId
+export default selectedRecipeId;

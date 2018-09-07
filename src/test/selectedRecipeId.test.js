@@ -8,3 +8,7 @@ test('Should return true if recipe Ids match', () => {
 test('Should return false if recipe Ids do not match', () => {
     expect(selectedRecipeId(testData, "12345")).toBe(false)
 });
+
+test('Should return false if called with nothing', () => {
+    expect(selectedRecipeId()).toBe(false)
+});
