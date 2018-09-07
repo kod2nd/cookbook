@@ -27,7 +27,10 @@ const Display = props => {
   }
   return (
     <div className="display">
-      <div className="content-empty">Search for recipes using the search bar</div>
+      <br />
+      <div className="content-empty">
+        Search for recipes using the search bar
+      </div>
     </div>
   );
 };

@@ -8,10 +8,8 @@
   border-bottom: 1px solid lightgray;
 }
 
-
-
 .list-item:hover {
-  background: rgb(231, 231, 231)
+  background: rgb(247, 247, 247);
 }
 
 .list-item .image {
@@ -32,14 +30,13 @@
 }
 
 .list-content .item-source {
-  font-size: 0.75em
+  font-size: 0.75em;
 }
 
 .selected-list-item {
-  background:grey;
+  background: rgb(231, 231, 231);
   height: 60px;
   box-sizing: border-box;
-  /* border: 1px solid black; */
   display: grid;
   grid-template-columns: 1fr 4fr;
   padding: 5px;
@@ -47,7 +44,7 @@
 }
 
 .selected-list-item:hover {
-  background: rgb(231, 231, 231)
+  background: rgb(247, 247, 247);
 }
 
 .selected-list-item .image {

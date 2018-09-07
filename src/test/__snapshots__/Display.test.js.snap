@@ -2,11 +2,14 @@
 
 exports[`<Display /> Snapshot should match 1`] = `
 Object {
-  "children": <div
-    className="content-empty"
+  "children": Array [
+    <br />,
+    <div
+      className="content-empty"
 >
-    Search for recipes using the search bar
+      Search for recipes using the search bar
 </div>,
+  ],
   "className": "display",
 }
 `;

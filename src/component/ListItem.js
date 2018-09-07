@@ -1,14 +1,13 @@
 import React from "react";
 import "../style/ListItem.css";
-import selectedRecipeId from "../utils/selectedRecipeId"
+import recipeIdMatches from "../utils/recipeIdMatches"
 
 const ListItem = props => {
   const { item, selectedRecipe } = props;
   const recipeId = item.recipe_id;
-  console.log("selection", selectedRecipe)
   return (
     <div
-      className={selectedRecipeId(selectedRecipe, recipeId)? "selected-list-item" : "list-item"}
+      className={recipeIdMatches(selectedRecipe, recipeId)? "selected-list-item" : "list-item"}
       id={recipeId}
       onClick={() => props.handleClick(recipeId)}
     >

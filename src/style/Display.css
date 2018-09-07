@@ -10,7 +10,7 @@
 
 .display .content-empty {
   font-size: 0.75em;
-  line-height: calc(100vh - 121px)
+  box-sizing: border-box;
 }
 
 .display .title {
@@ -54,6 +54,6 @@
 
   .recipe-source {
     margin: 10px;
-    font-size: 0.6em
+    font-size: 0.6em;
   }
 }
