@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/Modal.css";
 import convertToHttps from "../utils/convertToHttps";
+import IFrame from "./IFrame"
 
 const Modal = props => {
   const { selectedRecipe } = props;
@@ -22,6 +23,7 @@ const Modal = props => {
               src={recipeUrl}
               frameBorder="0"
             />
+            {/* <IFrame /> */}
             <a
               className="go-recipe"
               href={recipeUrl}
