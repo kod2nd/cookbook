@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import SideBar from "./SideBar";
 import Display from "./Display";
 import "../style/Body.css";
-import seedData from "../utils/seedData"
+import seedData from "../utils/seedData";
 import { URL, API_KEY } from "../utils/getHelper";
-
 
 class Body extends Component {
   constructor() {
@@ -20,22 +19,30 @@ class Body extends Component {
   searchClickHandler = async () => {
     const url = URL(API_KEY, this.userInput);
     const response = await fetch(url);
-    
+
     if (response.status === 200) {
       const recipesData = await response.json();
-      if(recipesData.error && recipesData.error === "limit") {
-        this.setState({ data: seedData.recipes });
+      if (recipesData.error && recipesData.error === "limit") {
+        this.setState({
+          data: seedData.recipes,
+          selectedRecipe:
+            seedData.recipes.length > 0 ? seedData.recipes[0] : null
+        });
       } else {
-        this.setState({ data: recipesData.recipes });
+        this.setState({
+          data: recipesData.recipes,
+          selectedRecipe:
+            recipesData.recipes.length > 0 ? recipesData.recipes[0] : null
+        });
       }
     }
   };
 
-  handleKeyPress = async (event) => {
-    if (event.key === 'Enter') {
+  handleKeyPress = async event => {
+    if (event.key === "Enter") {
       await this.searchClickHandler();
     }
-  }
+  };
 
   userInputEventListener = event => {
     this.userInput = event.target.value;
