@@ -18,6 +18,13 @@
 .list-item .list-content {
   grid-column: 2/3;
   text-align: left;
+  font-size: 0.85em;
+}
+
+.list-content .item-title {
   font-weight: bold;
+}
+
+.list-content .item-source {
   font-size: 0.75em
 }

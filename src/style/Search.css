@@ -5,6 +5,7 @@
 }
 .search-input {
   /* background: blueviolet; */
+  font-size: 0.75em;
   width: 60%;
 }
 

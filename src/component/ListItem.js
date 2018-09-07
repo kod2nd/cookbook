@@ -14,7 +14,7 @@ const ListItem = props => {
       <div className="list-content">
         <div className="item-title">{item.title}</div>
         <p></p>
-        <div className="item-source">{item.publisher}</div>
+        <div className="item-source">Publisher: {item.publisher}</div>
       </div>
     </div>
   );
