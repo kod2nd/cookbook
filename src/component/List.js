@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/List.css"
+import "../style/list.css";
 import ListItem from "./ListItem";
 
 const List = props => {
@@ -8,7 +8,14 @@ const List = props => {
   return (
     <div className="list">
       {data.map(item => {
-        return <ListItem item={item} key={item.recipe_id} handleClick={handleClick} selectedRecipe={selectedRecipe}/>;
+        return (
+          <ListItem
+            item={item}
+            key={item.recipe_id}
+            handleClick={handleClick}
+            selectedRecipe={selectedRecipe}
+          />
+        );
       })}
     </div>
   );
