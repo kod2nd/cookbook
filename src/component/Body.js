@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import SideBar from "./SideBar";
 import Display from "./Display";
-import seedData from "../utils/seedData";
 import "../style/Body.css";
 import { URL, API_KEY } from "../utils/getHelper";
+
 
 class Body extends Component {
   constructor() {
@@ -24,7 +24,7 @@ class Body extends Component {
       const recipesData = await response.json();
       this.setState({ data: recipesData.recipes });
     }
-    // For testing, use seedData.
+    // For testing, import seedData.
     // this.setState({ data: seedData });
   };
 
@@ -33,11 +33,13 @@ class Body extends Component {
   };
 
   setSelectedRecipe = id => {
+    // eslint-disable-next-line
     const selectedRecipe = this.state.data.find(recipe => {
       if (recipe.recipe_id === id) {
         return recipe;
       }
     });
+    // eslint-disable-next-line
     this.setState({ selectedRecipe: selectedRecipe });
   };
 
