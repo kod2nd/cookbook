@@ -4,7 +4,7 @@ import ListItem from "./ListItem";
 
 const List = props => {
   const { data, handleClick, selectedRecipe } = props;
-
+  
   return (
     <div className="list">
       {data.map(item => {

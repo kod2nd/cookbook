@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SideBar from "./SideBar";
 import Display from "./Display";
 import "../style/Body.css";
+import seedData from "../utils/seedData"
 import { URL, API_KEY } from "../utils/getHelper";
 
 
@@ -19,13 +20,15 @@ class Body extends Component {
   searchClickHandler = async () => {
     const url = URL(API_KEY, this.userInput);
     const response = await fetch(url);
-
+    
     if (response.status === 200) {
       const recipesData = await response.json();
-      this.setState({ data: recipesData.recipes });
+      if(recipesData.error === "limit") {
+        this.setState({ data: seedData.recipes });
+      } else {
+        this.setState({ data: recipesData.recipes });
+      }
     }
-    // For testing, import seedData.
-    // this.setState({ data: seedData });
   };
 
   userInputEventListener = event => {
