@@ -10,7 +10,7 @@ const Modal = props => {
         <a className="view-recipe" href="#openModal">
           View Recipe
         </a>
-        <div id="openModal" className="modalDialog">
+        <div id="openModal" className="modal-popup">
           <div className="modal-content">
             <a href="#close" title="Close" className="close">
               X

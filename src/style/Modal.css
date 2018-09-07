@@ -1,4 +1,4 @@
-.modalDialog {
+.modal-popup {
 	position: fixed;
 	font-family: Arial, Helvetica, sans-serif;
 	top: 0;
@@ -14,7 +14,7 @@
 	pointer-events: none;
 }
 
-.modalDialog:target {
+.modal-popup:target {
 	opacity:1;
 	pointer-events: auto;
 }
