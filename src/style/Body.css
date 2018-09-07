@@ -5,9 +5,14 @@
   margin: 10px auto
 }
 
-@media all and (max-width: 931px) {
+@media all and (max-width: 980px) {
+  .body{
+    width: 100%
+  }
+}
+
+@media all and (max-width: 700px) {
   .body{
     grid-template-columns: 1fr;
-    width: 100%
   }
 }

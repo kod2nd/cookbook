@@ -14,7 +14,7 @@ const Display = props => {
           {selectedRecipe.title} |{" "}
           {percentToRating(selectedRecipe.social_rank, RATING_STEPS)}
         </div>
-        
+
         <img className="display-image" src={selectedRecipe.image_url} alt="" />
 
         <Modal id="openModal" selectedRecipe={selectedRecipe} />
@@ -25,7 +25,11 @@ const Display = props => {
       </div>
     );
   }
-  return <div className="display" />;
+  return (
+    <div className="display">
+      <div className="content">Search for recipes using the search bar</div>
+    </div>
+  );
 };
 
 export default Display;

@@ -1,8 +1,12 @@
 .display {
+  grid-column: 2/3;
   border: 1px solid black;
   height: 80vh;
-  padding: 10px;
   box-sizing: border-box;
+}
+
+.display .content {
+  font-size: 0.75em;
 }
 
 .display .title {
@@ -13,11 +17,13 @@
   margin: 20px;
   box-sizing: border-box;
 }
+
 .recipe-source {
   font-size: 0.75em;
   margin: 20px;
   box-sizing: border-box;
 }
+
 .display-image {
   background: 50% 50% no-repeat;
   object-fit: contain;
@@ -26,4 +32,24 @@
   height: auto;
   font-size: 0.75em;
   box-sizing: border-box;
+}
+
+@media all and (max-width: 700px) {
+  .display {
+    grid-column: 1/2;
+    height: 60vh;
+  }
+
+  .display-image {
+    width: 200px;
+  }
+
+  .display .title {
+    margin: 10px;
+  }
+
+  .recipe-source {
+    margin: 10px;
+    font-size: 0.6em
+  }
 }
