@@ -77,6 +77,19 @@
   display: block;
 }
 
+.go-recipe {
+  background: rgb(20, 130, 158);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.75em;
+  width: 300px;
+  padding: 5px 15px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  display: block;
+  box-shadow: 1px 1px 1px 1px black
+}
+
 .view-recipe:hover {
   background: rgb(172, 172, 172);
   }
@@ -85,5 +98,13 @@
   .view-recipe {
 	margin: 5px auto;
 	width: 200px
+  }
+
+  .modal-content {
+    height: 85vh;
+  }
+
+  .go-recipe {
+    width: 80%
   }
 }

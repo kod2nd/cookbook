@@ -29,7 +29,10 @@ const Display = props => {
     <div className="display">
       <br />
       <div className="content-empty">
-        Search for recipes using the search bar
+        <div>Search for recipes using the search bar.</div>
+        <p />
+        Seperate ingredients by commas.
+        <div>Example: chicken, onion, carrot, pepper</div>
       </div>
     </div>
   );

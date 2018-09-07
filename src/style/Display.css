@@ -11,6 +11,8 @@
 .display .content-empty {
   font-size: 0.75em;
   box-sizing: border-box;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .display .title {

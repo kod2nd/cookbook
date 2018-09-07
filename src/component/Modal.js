@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Modal.css";
-import convertToHttps from "../utils/convertToHttps"
+import convertToHttps from "../utils/convertToHttps";
 
 const Modal = props => {
   const { selectedRecipe } = props;
@@ -16,7 +16,19 @@ const Modal = props => {
             <a href="#close" title="Close" className="close">
               X
             </a>
-            <iframe title="recipe" className="iframe" src={recipeUrl} frameBorder="0" />
+            <iframe
+              title="recipe"
+              className="iframe"
+              src={recipeUrl}
+              frameBorder="0"
+            />
+            <a
+              className="go-recipe"
+              href={recipeUrl}
+              target="_blank"
+            >
+              Go to Recipe
+            </a>
           </div>
         </div>
       </div>
