@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: "Lucida Sans Unicode", "Trebuchet MS", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400
 }
 
 .App-logo {
@@ -23,6 +26,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
