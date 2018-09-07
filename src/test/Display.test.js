@@ -21,7 +21,7 @@ describe("<Display />", () => {
       expect(wrapper.find(".recipe-source")).toHaveLength(1);
     });
     it("link text", () => {
-      expect(wrapper.find(".popularity")).toHaveLength(1);
+      expect(wrapper.find(".rating")).toHaveLength(1);
     });
   });
 
