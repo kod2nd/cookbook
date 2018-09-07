@@ -24,6 +24,7 @@
   grid-column: 2/3;
   text-align: left;
   font-size: 0.85em;
+  overflow: hidden
 }
 
 .list-content .item-title {
