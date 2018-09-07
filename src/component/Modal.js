@@ -15,7 +15,7 @@ const Modal = props => {
             <a href="#close" title="Close" className="close">
               X
             </a>
-            <iframe className="iframe" src={recipeUrl} frameborder="0" />
+            <iframe className="iframe" src={recipeUrl} frameBorder="0" />
           </div>
         </div>
       </div>

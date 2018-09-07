@@ -17,11 +17,8 @@ describe("<Display />", () => {
     it("image", () => {
       expect(wrapper.find(".display-image")).toHaveLength(1);
     });
-    it("recipe link", () => {
+    it("recipe source", () => {
       expect(wrapper.find(".recipe-source")).toHaveLength(1);
-    });
-    it("link text", () => {
-      expect(wrapper.find(".rating")).toHaveLength(1);
     });
   });
 
