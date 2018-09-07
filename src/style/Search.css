@@ -1,6 +1,6 @@
 .search {
   background: tomato;
-  padding: 6px 0;
+  padding: 7px 0;
   border-bottom: 1px solid black;
 }
 .search-input {
@@ -17,7 +17,7 @@
     box-shadow: blue;
     border-color: azure
   }
-  
+
 .classname:active {
   position: relative;
   top: 1px;

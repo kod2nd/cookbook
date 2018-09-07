@@ -3,7 +3,7 @@
 exports[`<Display /> Snapshot should match 1`] = `
 Object {
   "children": <div
-    className="content"
+    className="content-empty"
 >
     Search for recipes using the search bar
 </div>,

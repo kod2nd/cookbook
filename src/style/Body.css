@@ -1,7 +1,9 @@
 .body {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  margin: 0px auto
+  margin: 0px auto;
+  height: calc(100vh - 121px);
+  
 }
 
 @media all and (max-width: 850px) {

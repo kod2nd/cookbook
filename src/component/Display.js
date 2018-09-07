@@ -27,7 +27,7 @@ const Display = props => {
   }
   return (
     <div className="display">
-      <div className="content">Search for recipes using the search bar</div>
+      <div className="content-empty">Search for recipes using the search bar</div>
     </div>
   );
 };
