@@ -6,3 +6,17 @@
   box-sizing: border-box;
   overflow-y: auto;
 }
+
+.list .content-empty {
+  font-size: 0.75em;
+  box-sizing: border-box;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center
+}
+
+@media all and (max-width: 850px) {
+  .list{
+    height: calc(50vh - 40px);
+  }
+}

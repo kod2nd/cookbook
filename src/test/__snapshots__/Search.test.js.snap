@@ -7,7 +7,7 @@ Object {
       className="search-input"
       onChange={[Function]}
       onKeyPress={[Function]}
-      placeholder="Ingredients e.g. chicken, carrot, pasta..."
+      placeholder="Search for a recipe"
       type="text"
 />,
     <Button

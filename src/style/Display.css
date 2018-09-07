@@ -11,8 +11,9 @@
 .display .content-empty {
   font-size: 0.75em;
   box-sizing: border-box;
-  width: 70%;
+  width: 300px;
   margin: 0 auto;
+  text-align: center
 }
 
 .display .title {
@@ -43,6 +44,7 @@
   .display {
     grid-column: 1/2;
     height: 60vh;
+    border-top:none
   }
 
   .display-image {

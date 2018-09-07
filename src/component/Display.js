@@ -25,17 +25,7 @@ const Display = props => {
       </div>
     );
   }
-  return (
-    <div className="display">
-      <br />
-      <div className="content-empty">
-        <div>Search for recipes using the search bar.</div>
-        <p />
-        Seperate ingredients by commas.
-        <div>Example: chicken, onion, carrot, pepper</div>
-      </div>
-    </div>
-  );
+  return <div className="display" />;
 };
 
 export default Display;

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import '../style/Search.css'
-const INPUT_PLACEHOLDER = "Ingredients e.g. chicken, carrot, pasta...";
+const INPUT_PLACEHOLDER = "Search for a recipe";
 const SEARCH_BUTTON_TEXT = "Find Recipe";
 
 const Search = props => {
