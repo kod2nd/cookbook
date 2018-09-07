@@ -1,17 +1,10 @@
 .body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 70%;
-  margin: 10px auto
+  grid-template-columns: 1fr 2fr;
+  margin: 0px auto
 }
 
-@media all and (max-width: 980px) {
-  .body{
-    width: 100%
-  }
-}
-
-@media all and (max-width: 700px) {
+@media all and (max-width: 850px) {
   .body{
     grid-template-columns: 1fr;
   }

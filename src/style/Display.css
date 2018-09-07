@@ -34,7 +34,7 @@
   box-sizing: border-box;
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 850px) {
   .display {
     grid-column: 1/2;
     height: 60vh;

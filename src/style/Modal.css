@@ -76,6 +76,10 @@
   display: block;
 }
 
+.view-recipe:hover {
+  background: rgb(172, 172, 172);
+  }
+
 @media all and (max-width: 700px) {
   .view-recipe {
 	margin: 5px auto;

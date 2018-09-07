@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "./Button";
+import '../style/Search.css'
 const INPUT_PLACEHOLDER = "Ingredients e.g. chicken, carrot, pasta...";
-const SEARCH_BUTTON_TEXT = "Find Recipes";
+const SEARCH_BUTTON_TEXT = "Find Recipe";
 
 const Search = props => {
   const { handleUserInput, handleSearchClick } = props;
@@ -16,7 +17,7 @@ const Search = props => {
       <Button
         className="search-button"
         content={SEARCH_BUTTON_TEXT}
-        handleClick={props.handleSearchClick}
+        handleClick={handleSearchClick}
       />
     </div>
   );

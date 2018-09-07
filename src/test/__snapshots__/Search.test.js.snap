@@ -11,7 +11,7 @@ Object {
 />,
     <Button
       className="search-button"
-      content="Find Recipes"
+      content="Find Recipe"
       handleClick={undefined}
 />,
   ],
