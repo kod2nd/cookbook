@@ -3,16 +3,16 @@
 exports[`<Body /> Snapshot should match 1`] = `
 Object {
   "children": Array [
+    <Display
+      className="display"
+      selectedRecipe={null}
+/>,
     <SideBar
       className="side-bar"
       data={Array []}
       handleClick={[Function]}
       handleSearchClick={[Function]}
       handleUserInput={[Function]}
-/>,
-    <Display
-      className="display"
-      selectedRecipe={null}
 />,
   ],
   "className": "body",

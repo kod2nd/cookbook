@@ -8,23 +8,22 @@
 .display .title {
   font-family: "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
+  font-size: calc(10px + 1vw);
   margin: 20px;
   box-sizing: border-box;
 }
-
 .recipe-source {
   font-size: 0.75em;
   margin: 20px;
   box-sizing: border-box;
 }
-
 .display-image {
   background: 50% 50% no-repeat;
   object-fit: contain;
-
-  width: 100%;
-  height: 250px;
+  margin: 5px auto;
+  width: 250px;
+  height: auto;
   font-size: 0.75em;
   box-sizing: border-box;
 }

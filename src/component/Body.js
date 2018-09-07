@@ -28,7 +28,7 @@ class Body extends Component {
     //   const recipesData = await response.json();
     //   this.setState({ data: recipesData.recipes });
     // }
-    this.setState({ data: seedData })
+    this.setState({ data: seedData });
   };
 
   userInputEventListener = event => {
@@ -48,6 +48,7 @@ class Body extends Component {
     const { data, selectedRecipe } = this.state;
     return (
       <div className="body">
+        <Display className="display" selectedRecipe={selectedRecipe} />
         <SideBar
           className="side-bar"
           data={data}
@@ -55,7 +56,6 @@ class Body extends Component {
           handleUserInput={this.userInputEventListener}
           handleSearchClick={this.searchClickHandler}
         />
-        <Display className="display" selectedRecipe={selectedRecipe} />
       </div>
     );
   }

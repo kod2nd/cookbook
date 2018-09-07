@@ -6,7 +6,7 @@ const Modal = props => {
   if (selectedRecipe) {
     const recipeUrl = selectedRecipe.source_url;
     return (
-      <div>
+      <div className="modal">
         <a className="view-recipe" href="#openModal">
           View Recipe
         </a>

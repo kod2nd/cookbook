@@ -1,16 +1,13 @@
 .body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 90%;
+  width: 70%;
   margin: 10px auto
 }
 
-.body.side-bar {
-  grid-column: 1/2;
-  background: skyblue;
-}
-
-.body.display {
-  grid-column: 2/3;
-  background: tomato;
+@media all and (max-width: 931px) {
+  .body{
+    grid-template-columns: 1fr;
+    width: 100%
+  }
 }
