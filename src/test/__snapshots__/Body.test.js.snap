@@ -11,6 +11,7 @@ Object {
       className="side-bar"
       data={Array []}
       handleClick={[Function]}
+      handleKeyPress={[Function]}
       handleSearchClick={[Function]}
       handleUserInput={[Function]}
       selectedRecipe={null}

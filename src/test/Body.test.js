@@ -48,18 +48,37 @@ describe("<Body />", () => {
       expect(body.userInput).toBe(MOCK_INPUT);
     });
 
-    it("searchClickHandler should fetch data and setState", async () => {
-      const mockFetchData = {recipes:[{ name: "name1" }, { name: "name2" }]};
-      fetch.resetMocks();
-      fetch.mockResponseOnce(JSON.stringify(mockFetchData));
-      const newWrapper = shallow(<Body />);
-      const newBody = newWrapper.instance();
-      await newBody.searchClickHandler();
+    describe("Mocking Fetch", () => {
+      const mockFetchData = { recipes: [{ name: "name1" }, { name: "name2" }] };
 
-      const url = URL(API_KEY, newBody.userInput);
+      beforeEach(() => {
+        fetch.resetMocks();
+      });
+      
+      it("searchClickHandler should fetch data and setState", async () => {
+        fetch.mockResponseOnce(JSON.stringify(mockFetchData));
+        const newWrapper = shallow(<Body />);
+        const newBody = newWrapper.instance();
+        await newBody.searchClickHandler();
 
-      expect(fetch).toBeCalledWith(url);
-      expect(newWrapper.state("data")).toEqual(mockFetchData.recipes);
+        const url = URL(API_KEY, newBody.userInput);
+
+        expect(fetch).toBeCalledWith(url);
+        expect(newWrapper.state("data")).toEqual(mockFetchData.recipes);
+      });
+      it("handleKeyPress should call searchClick Handler, which fetches data", async () => {
+        const mockEnter = {
+          key: "Enter"
+        };
+        fetch.mockResponseOnce(JSON.stringify(mockFetchData));
+        const newWrapper = shallow(<Body />);
+        const newBody = newWrapper.instance();
+
+        const url = URL(API_KEY, newBody.userInput);
+       await newBody.handleKeyPress(mockEnter);
+        expect(fetch).toBeCalledWith(url);
+        expect(newWrapper.state("data")).toEqual(mockFetchData.recipes);
+      });
     });
   });
 

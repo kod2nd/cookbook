@@ -4,6 +4,7 @@ exports[`Snapshot should match 1`] = `
 Object {
   "children": Array [
     <Search
+      handleKeyPress={undefined}
       handleSearchClick={undefined}
       handleUserInput={undefined}
 />,

@@ -5,7 +5,7 @@ const INPUT_PLACEHOLDER = "Ingredients e.g. chicken, carrot, pasta...";
 const SEARCH_BUTTON_TEXT = "Find Recipe";
 
 const Search = props => {
-  const { handleUserInput, handleSearchClick } = props;
+  const { handleUserInput, handleSearchClick, handleKeyPress } = props;
   return (
     <div className="search">
       <input
@@ -13,6 +13,7 @@ const Search = props => {
         type="text"
         placeholder={INPUT_PLACEHOLDER}
         onChange={event => handleUserInput(event)}
+        onKeyPress={event => handleKeyPress(event)}
       />
       <Button
         className="search-button"

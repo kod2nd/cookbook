@@ -23,13 +23,19 @@ class Body extends Component {
     
     if (response.status === 200) {
       const recipesData = await response.json();
-      if(recipesData.error === "limit") {
+      if(recipesData.error && recipesData.error === "limit") {
         this.setState({ data: seedData.recipes });
       } else {
         this.setState({ data: recipesData.recipes });
       }
     }
   };
+
+  handleKeyPress = async (event) => {
+    if (event.key === 'Enter') {
+      await this.searchClickHandler();
+    }
+  }
 
   userInputEventListener = event => {
     this.userInput = event.target.value;
@@ -58,6 +64,7 @@ class Body extends Component {
           handleUserInput={this.userInputEventListener}
           handleSearchClick={this.searchClickHandler}
           selectedRecipe={selectedRecipe}
+          handleKeyPress={this.handleKeyPress}
         />
       </div>
     );

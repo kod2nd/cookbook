@@ -6,6 +6,7 @@ Object {
     <input
       className="search-input"
       onChange={[Function]}
+      onKeyPress={[Function]}
       placeholder="Ingredients e.g. chicken, carrot, pasta..."
       type="text"
 />,
