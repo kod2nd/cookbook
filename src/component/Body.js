@@ -16,19 +16,16 @@ class Body extends Component {
     this.userInput = "";
   }
 
-  // componentDidMount() {
-  //   this.setState({ data: seedData });
-  // }
-
   searchClickHandler = async () => {
-    // const url = URL(API_KEY, this.userInput);
-    // const response = await fetch(url);
+    const url = URL(API_KEY, this.userInput);
+    const response = await fetch(url);
 
-    // if (response.status === 200) {
-    //   const recipesData = await response.json();
-    //   this.setState({ data: recipesData.recipes });
-    // }
-    this.setState({ data: seedData });
+    if (response.status === 200) {
+      const recipesData = await response.json();
+      this.setState({ data: recipesData.recipes });
+    }
+    // For testing, use seedData.
+    // this.setState({ data: seedData });
   };
 
   userInputEventListener = event => {
