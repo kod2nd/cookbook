@@ -24,7 +24,8 @@
   height: 80%;
   position: relative;
   margin: 5% auto;
-  padding: 10px;
+  padding: 5px;
+  box-sizing: border-box;
   background: rgba(255, 255, 255);
   -moz-box-shadow: 2px 2px 3px #000;
   -webkit-box-shadow: 2px 2px 3px #000;
@@ -101,7 +102,9 @@
   }
 
   .modal-content {
-    height: 85vh;
+    height: 80vh;
+    width: 87%;
+    margin: 10% auto;
   }
 
   .go-recipe {
