@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/Display.css";
+import Modal from "./Modal"
 
 const Display = props => {
   const { selectedRecipe } = props;
@@ -10,9 +11,18 @@ const Display = props => {
         <img className="display-image" src={selectedRecipe.image_url} alt="" />
         <div className="recipe-link">
           View Recipe:
-          <a className="link-url" target="_blank" href={selectedRecipe.source_url}>{selectedRecipe.source_url}</a> />
+          <a
+            className="link-url"
+            target="_blank"
+            href={selectedRecipe.source_url}
+          >
+            {selectedRecipe.source_url}
+          </a>
         </div>
-        <div className="popularity">Popularity: {selectedRecipe.social_rank.toFixed(5)}</div>
+        <Modal id="openModal" selectedRecipe={selectedRecipe}/>
+        <div className="popularity">
+          Popularity: {selectedRecipe.social_rank.toFixed(5)}
+        </div>
       </div>
     );
   }
