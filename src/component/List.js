@@ -4,7 +4,6 @@ import ListItem from "./ListItem";
 
 const List = props => {
   const { data, handleClick, selectedRecipe } = props;
-//   console.log("insideList", data);
 
   return (
     <div className="list">

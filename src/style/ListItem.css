@@ -1,7 +1,6 @@
 .list-item {
   height: 60px;
   box-sizing: border-box;
-  /* border: 1px solid black; */
   display: grid;
   grid-template-columns: 1fr 4fr;
   padding: 5px;
