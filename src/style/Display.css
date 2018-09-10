@@ -44,7 +44,8 @@
   .display {
     grid-column: 1/2;
     height: 60vh;
-    border-top:none
+    border:none;
+    border-top: 1px solid maroon
   }
 
   .display .title {

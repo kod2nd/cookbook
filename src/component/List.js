@@ -26,7 +26,7 @@ const List = props => {
         <p />
         If searching by ingredients, 
         seperate the ingredients with commas.
-        E.g. Chicken, onion, carrot, pepper
+        E.g. Chicken, onion, carrot
       </div>
   
   </div>

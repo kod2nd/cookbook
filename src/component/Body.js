@@ -22,6 +22,7 @@ class Body extends Component {
 
     if (response.status === 200) {
       const recipesData = await response.json();
+
       if (recipesData.error && recipesData.error === "limit") {
         this.setState({
           data: seedData.recipes,
