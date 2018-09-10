@@ -29,10 +29,16 @@
 
 .list-content .item-title {
   font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .list-content .item-source {
   font-size: 0.75em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .selected-list-item {
